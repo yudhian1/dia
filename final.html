@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Terakhir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./final.css">
+</head>
+<body>
+    <audio class="song" loop>
+        <source src="./music/final.mp3">
+        Your browser isn't invited for super fun audio time.
+    </audio>
+
+    <div class="container">
+        <div class="heart-container">
+            <div class="heart"></div>
+        </div>
+        
+        <div class="content">
+            <h1 class="title">Pesan Terakhir</h1>
+            <h2 class="subtitle">Dua Surat Untukmu</h2>
+            
+            <div class="letters-container">
+                <!-- Letter 1: Untuk Kamu -->
+                <div class="letter-envelope" id="letter1" onclick="openLetter('letter1')">
+                    <div class="envelope">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body">
+                            <div class="envelope-content">
+                                <h3>Untuk Kamu</h3>
+                                <p>💕</p>
+                                <span class="click-hint">Klik untuk membuka</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Letter 2: Dari Aku -->
+                <div class="letter-envelope" id="letter2" onclick="openLetter('letter2')">
+                    <div class="envelope">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body">
+                            <div class="envelope-content">
+                                <h3>Dari Aku</h3>
+                                <p>💌</p>
+                                <span class="click-hint">Klik untuk membuka</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <button onclick="window.location.href='gallery.html'">← Kembali ke Galeri</button>
+                <button onclick="window.location.href='index.html'">🏠 Halaman Utama</button>
+                <button class="exit-button" onclick="exitWebsite()">✨ Selesai & Keluar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal untuk Letter 1: Untuk Kamu -->
+    <div id="letterModal1" class="letter-modal">
+        <div class="letter-content">
+            <span class="close-letter" onclick="closeLetter('letterModal1')">&times;</span>
+            <div class="letter-paper">
+                <h2 class="letter-title">Untuk Kamu, Sayangku</h2>
+                <div class="letter-text">
+                    <p class="letter-date">Hari ini, di hari spesialmu</p>
+                    
+                    <p>Sayang,</p>
+                    
+                    <p>Di hari ulang tahunmu yang istimewa ini, aku ingin kamu tahu betapa berharganya dirimu bagiku. Kamu adalah cahaya dalam hidupku, alasan aku tersenyum setiap pagi, dan inspirasi dalam setiap langkahku.</p>
+                    
+                    <p>Sejak pertama kali kita bertemu, hidupku berubah menjadi lebih indah. Kamu membawa warna-warna cerah ke dalam hari-hariku yang dulu monoton. Setiap tawa yang kita bagi, setiap percakapan yang kita lakukan, dan setiap momen yang kita habiskan bersama adalah harta yang tak ternilai bagiku.</p>
+                    
+                    <p>Aku mengagumi kekuatanmu dalam menghadapi setiap tantangan, kebaikan hatimu yang selalu mengutamakan orang lain, dan cara kamu melihat dunia dengan mata yang penuh harapan. Kamu mengajarkanku arti cinta yang sesungguhnya - cinta yang sabar, pengertian, dan tanpa syarat.</p>
+                    
+                    <p>Perjalanan kita mungkin tidak selalu mulus, tapi setiap rintangan yang kita hadapi bersama hanya membuat ikatan kita semakin kuat. Kamu adalah partner terbaikku dalam hidup, sahabat yang selalu mendengarkan, dan cinta yang akan selalu kugenggam erat.</p>
+                    
+                    <p>Di tahun barumu ini, aku berharap semua impian dan cita-citamu menjadi kenyataan. Semoga kebahagiaan selalu menyertaimu, kesehatan selalu terjaga, dan kesuksesan selalu menemanimu. Aku akan selalu ada di sisimu, mendukung setiap langkahmu, dan mencintaimu dengan segenap hatiku.</p>
+                    
+                    <p>Terima kasih telah menjadi bagian terpenting dalam hidupku. Terima kasih telah mengajarkanku arti kebahagiaan yang sesungguhnya. Dan terima kasih telah memilih untuk berbagi hidup bersamaku.</p>
+                    
+                    <p>Selamat ulang tahun, sayangku. Semoga hari ini dan setiap hari setelahnya dipenuhi dengan kebahagiaan, cinta, dan semua hal indah yang kamu layak dapatkan.</p>
+                    
+                    <p class="letter-closing">Dengan cinta yang tak terbatas,</p>
+                    <p class="letter-signature">Aku yang selalu mencintaimu ❤️</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal untuk Letter 2: Dari Aku -->
+    <div id="letterModal2" class="letter-modal">
+        <div class="letter-content">
+            <span class="close-letter" onclick="closeLetter('letterModal2')">&times;</span>
+            <div class="letter-paper">
+                <h2 class="letter-title">Dari Hatiku yang Terdalam</h2>
+                <div class="letter-text">
+                    <p class="letter-date">Untuk diriku sendiri, dan untukmu</p>
+                    
+                    <p>Aku ingin bercerita tentang perasaanku...</p>
+                    
+                    <p>Sebelum kamu datang ke dalam hidupku, aku adalah seseorang yang merasa tidak lengkap. Aku mencari-cari arti kebahagiaan yang sesungguhnya, bertanya-tanya kapan aku akan menemukan seseorang yang benar-benar memahami diriku.</p>
+                    
+                    <p>Lalu kamu datang, seperti jawaban atas semua doa yang pernah kupanjatkan. Kamu tidak hanya mengisi kekosongan dalam hatiku, tapi juga mengajarkanku bahwa cinta itu bukan tentang mencari kesempurnaan, melainkan tentang menerima dan mencintai seseorang apa adanya.</p>
+                    
+                    <p>Aku mengakui, aku bukanlah seseorang yang sempurna. Ada kalanya aku membuat kesalahan, ada saat-saat dimana aku tidak bisa menjadi yang terbaik untukmu. Tapi kamu selalu ada, dengan kesabaran dan pengertian yang luar biasa, menerima semua kekuranganku dengan lapang dada.</p>
+                    
+                    <p>Setiap hari bersamamu adalah pelajaran baru tentang cinta. Kamu mengajarkanku bahwa cinta itu bukan hanya tentang kata-kata manis, tapi tentang tindakan nyata. Tentang bagaimana kita saling mendukung di saat sulit, saling berbagi kebahagiaan di saat senang, dan saling menguatkan ketika salah satu dari kita merasa lemah.</p>
+                    
+                    <p>Aku ingin kamu tahu bahwa setiap detik yang kuhabiskan bersamamu adalah detik yang berharga. Setiap percakapan kita, setiap tawa yang kita bagi, setiap pelukan hangat yang kamu berikan, semua itu tersimpan rapi dalam hatiku sebagai kenangan terindah.</p>
+                    
+                    <p>Kadang aku takut, takut kehilanganmu, takut tidak bisa membuatmu bahagia seperti yang kamu layak dapatkan. Tapi kemudian aku ingat betapa kuatnya cinta yang kita miliki, betapa dalam ikatan yang telah kita bangun bersama.</p>
+                    
+                    <p>Aku berjanji akan terus berusaha menjadi yang terbaik untukmu. Bukan karena aku ingin menjadi sempurna, tapi karena kamu layak mendapatkan cinta yang tulus dan usaha yang sungguh-sungguh. Aku akan terus belajar, terus tumbuh, dan terus mencintaimu dengan cara yang lebih baik setiap harinya.</p>
+                    
+                    <p>Di hari ulang tahunmu ini, aku tidak hanya merayakan hari kelahiranmu, tapi juga merayakan kehadiran malaikat kecil yang telah mengubah hidupku menjadi lebih bermakna. Kamu adalah hadiah terindah yang pernah Tuhan berikan padaku.</p>
+                    
+                    <p>Terima kasih telah memilihku, terima kasih telah percaya padaku, dan terima kasih telah mengizinkanku mencintaimu. Aku berharap kita bisa terus bersama, menghadapi setiap tantangan hidup berdampingan, dan menciptakan lebih banyak kenangan indah di masa depan.</p>
+                    
+                    <p class="letter-closing">Selamanya milikmu,</p>
+                    <p class="letter-signature">Aku yang mencintaimu tanpa batas 💕</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exit Confirmation Modal -->
+    <div id="exitModal" class="exit-modal">
+        <div class="exit-content">
+            <div class="exit-icon">👋</div>
+            <h2>Terima Kasih!</h2>
+            <p>Terima kasih sudah mengunjungi website spesial ini.</p>
+            <p>Semoga hari ulang tahunmu menjadi hari yang tak terlupakan!</p>
+            <p>💕 Sampai jumpa lagi! 💕</p>
+            <div class="exit-buttons">
+                <button onclick="confirmExit()" class="confirm-exit">Ya, Keluar</button>
+                <button onclick="cancelExit()" class="cancel-exit">Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./script/final.js"></script>
+</body>
+</html>
