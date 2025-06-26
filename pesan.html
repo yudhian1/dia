@@ -17,11 +17,15 @@
 
 <body>
 
-    <audio class="song" loop autoplay>
-        <source src="./music/hbd.mpeg">
-        </source>
+    <audio class="song" id="backgroundMusic" loop>
+        <source src="./music/1.mp3">
         Your browser isn't invited for super fun audio time.
     </audio>
+
+    <script>
+        // Atur volume langsung
+        document.getElementById('backgroundMusic').volume = 0.5;
+    </script>
 
     <div class="container">
         <div class="one">
@@ -159,5 +163,6 @@
     <!-- Sweetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="application/javascript" src="./script/main.js"></script>
+    
 
 </html>

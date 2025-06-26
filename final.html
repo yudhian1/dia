@@ -11,10 +11,15 @@
     <link rel="stylesheet" href="./final.css">
 </head>
 <body>
-    <audio class="song" loop>
-        <source src="./music/final.mp3">
+    <audio class="song" id="backgroundMusic" loop>
+        <source src="./music/3.mp3">
         Your browser isn't invited for super fun audio time.
     </audio>
+
+    <script>
+        // Atur volume langsung
+        document.getElementById('backgroundMusic').volume = 0.5;
+    </script>
 
     <div class="container">
         <div class="heart-container">
@@ -145,5 +150,6 @@
     <!-- Sweetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./script/final.js"></script>
+    
 </body>
 </html>
